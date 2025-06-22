@@ -2,8 +2,9 @@
     "homepage":"https://redis.io/insight/",
     "license":"SSPL",
     "version":"2.70",
-    "url":"https://s3.amazonaws.com/redisinsight.download/public/latest/Redis-Insight-win-installer.exe#/dl.7z",
+    "url":"https://s3.amazonaws.com/redisinsight.download/public/latest/Redis-Insight-win-installer.exe",
     "hash":"2b3dd745ed8962e73f9260d955809c87ebd47f113e6ae44d877e07ea9682aeb2",
+    "innosetup":true,
     "bin":"Redis Insight.exe",
     "shortcuts":[
         [
