@@ -13,7 +13,7 @@
         "script": [
             "Expand-7zipArchive -Path \"$dir\\$fname\" -Removal",
             "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath $dir",
-            "Rename-Item -Path \"$dir\\'Redis Insight.exe'\" -NewName \"$dir\\RedisInsight.exe\""
+            "Rename-Item -Path \"$dir\\Redis Insight.exe\" -NewName \"$dir\\RedisInsight.exe\""
 
         ]
     },
