@@ -2,14 +2,41 @@
     "homepage":"https://redis.io/insight/",
     "license":"SSPL",
     "version":"2.70",
-    "url":"https://s3.amazonaws.com/redisinsight.download/public/latest/Redis-Insight-win-installer.exe",
-    "hash":"2b3dd745ed8962e73f9260d955809c87ebd47f113e6ae44d877e07ea9682aeb2",
-    "innosetup":true,
-    "bin":"Redis Insight.exe",
+    "description":"A visual tool that provides capabilities to design, develop and optimize your Redis application.",
+    "architecture": {
+        "64bit": {
+            "url": "https://s3.amazonaws.com/redisinsight.download/public/latest/Redis-Insight-win-installer.exe",
+            "hash": "2b3dd745ed8962e73f9260d955809c87ebd47f113e6ae44d877e07ea9682aeb2"
+        }
+    },
+    "installer": {
+        "script": [
+            "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath $dir",
+            "Rename-Item -Path \"$dir\\'Redis Insight.exe'\" -NewName \"$dir\\RedisInsight.exe\""
+
+        ]
+    },
+    "post_install": [
+    "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "Remove-Item \"$dir\\`$R0\" -Force -Recurse"
+    ],
+    "bin": "RedisInsight.exe",
     "shortcuts":[
         [
-            "Redis Insight",
-            "Redis Sofotware"
+            "RedisInsight.exe",
+            "RedisInsight"
         ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://s3.amazonaws.com/redisinsight.download/public/latest/Redis-Insight-win-installer.exe"
+            }
+        }
+    },
+    "notes": [
+        "please check bin name and short cut when major version is changed.",
+        "It is renamed in script. But no one knows what is going on for new version."
     ]
 }
