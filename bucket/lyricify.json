@@ -1,0 +1,31 @@
+{
+    "homepage":"https://lyricify.app/",
+    "license":"Apache-2.0 license",
+    "version":"4.3.32",
+    "vdate":"250617",
+    "description":"Lyricify (/lɪ'rɪsəfaɪ/), a fantastic app to provide scroll lyrics for Spotify and other apps.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/WXRIW/Lyricify-App/releases/download/v4.3.32/Lyricify.for.Spotify.Ver.4.3.32.250617-release.Portable.7z",
+            "hash": "67eb440564181f5f8679acb03d1c1a7537a120255c9c32e91141774cc3055924"
+        }
+    },
+    "bin": "LyricifyLauncher.exe",
+    "shortcuts":[
+        [
+            "LyricifyLauncher.exe",
+            "Lyricify"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/WXRIW/Lyricify-App/releases/download/v$version/Lyricify.for.Spotify.Ver.$version.$vdate-release.Portable.7z"
+            }
+        }
+    },
+    "notes": [
+        "Lyricify 4 仅支持 Spotify！"
+    ]
+}
